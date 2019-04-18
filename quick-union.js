@@ -7,9 +7,9 @@ function quickUnionUF(N) { // Creates the array we will working with
 }
 
 function root(i) {
-    while (i != id[i]) { // Chase parent pointers until root is reached 
-        i = id[i] 
-        return i;
+    while (i != id[i]) { // While i is not equal to the array position value
+        i = id[i] // Assign i to the array position value
+        return i; // Return i 
     }
 }
 
@@ -18,7 +18,7 @@ function connected(p, q) { // check if p and q have the same root
 }
 
 function union(p, q) { // Change root of p to point to root of q 
-        i = root(p)
+        i = root(p); // Find the two roots
         j = root(q);
-        id[i] = j;
+        id[i] = j; // Set the id of the first root to the second one 
 }
